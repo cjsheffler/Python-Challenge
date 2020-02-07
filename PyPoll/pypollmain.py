@@ -1,3 +1,12 @@
+# list all candidates who received votes
+# Count the number of votes
+# percentage of votes for each candidate
+# total votes for each candidate
+# winner of the election
+# export to csv and print to terminal
+# voterid county candidate
+
+
 #import the modules needed
 
 import os
@@ -11,11 +20,24 @@ with open(csvpath, newline='') as csvfile:
     csv_header = next(csvreader)
     # print(f"CSV Header: {csv_header}")
 
-    # for row in csvreader:
-        # print(row)
+    candidatelist = []
+    kahncount = 0
+    correycount = 0
+    licount = 0
+    otooleycount = 0
+    totalvotes = 0
 
-#The three columns are voterid, county, and candidate
+    for row in csvreader:
+        totalvotes = totalvotes + 1  
+        if row[2] == 'Kahn':
+            kahncount = kahncount + 1,
+        elif row[2] == 'Correy':
+            correycount = correycount + 1,
+        elif row[2] == 'Li':
+            licount = licount + 1,
+        elif row[2] == "O'Tooley":
+            otooleycount = otooleycount + 1
 
-    total_votes = sum(1 for row in csvreader)
-
-    print(total_votes)
+print(candidatelist)
+print(totalvotes)
+print(kahncount)
