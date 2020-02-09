@@ -79,10 +79,10 @@ with open(csvpath, newline='') as csvfile:
     print(line6)
     print(line7)
     print(line8)
+    print("Data analysis output as financialanalysis.csv")
 
     #output to CSV - method from Python Lesson 2.9
     output_path = os.path.join('financialanalysis.csv')
-
     with open(output_path, 'w', newline='') as csvfile:
         csvwriter = csv.writer(csvfile, delimiter=',')
         csvwriter.writerow([line1])
